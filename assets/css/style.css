@@ -1633,11 +1633,16 @@ Live Section style
 .stream {
     width:850px;
     height:500px;
+
 }
 
 .live {
     margin: 0px;
     padding: 10px;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+    width:100%;
 }
 
 @media only screen and (min-width: 1999px) {
