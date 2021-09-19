@@ -12,6 +12,10 @@ html {
 body {
   margin: 0;
 }
+
+footer{
+  margin:0;
+}
 article,
 aside,
 details,
