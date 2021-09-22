@@ -1689,6 +1689,28 @@ Live Section style
     }
   }
 
+  /*Font form*/
+
+  .fontform {
+      color: #f5f5f5 !important;
+  }
+
+  .button-form { 
+    display: inline-block;
+    margin-top: 15px;
+    align-items: center ;
+    justify-self: center;
+    color: #fff;
+    background-color: #212121;
+    border: 1px solid;
+    border-color: #212121;
+    padding: 1rem 2rem;
+    width: 30%;
+  }
+
+  .button-form :hover {
+  color: #f5f5f5; 
+}
 
 /*
 Contact Section style
