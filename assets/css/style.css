@@ -1739,7 +1739,7 @@ Contact Section style
     transition: all 0.4s;
 }
 .widget_socail ul li a:hover i{
-    background-color: #ff6863;
+    background-color: #000;
 }
 
 
@@ -1805,7 +1805,7 @@ Footer Section style
 }
 
 .scrollup:hover {
-    background: #ff6863;
+    background: #000;
     opacity: 1;
 }
 
