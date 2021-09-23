@@ -98,9 +98,143 @@ body {
 .disabled{
     cursor: not-allowed;
 }
+@media only screen and (max-width: 900px) {
+    
+    .home_btns{
+        display:grid;
+        grid-template:1fr 1fr / 1fr;;
+        justify-content: center;
+        justify-items: center
+    }
+
+    .btn-primary.m-top-20{
+        background-color: #AD0000 ;
+        width: 75%;
+    }
+
+    .btn-default.m-top-20{
+        width: 75%;
+    }
+}
+.buttonsheader {
+    display: grid;
+    grid-template: 1fr / 100px 150px 100px 100px 100px;
+    grid-template-areas: "inicio" "Prédicas en vivo" "Nosotros" "Seminario" "Mapa";
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 990px) {
+    .buttonsheader {
+        grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr;
+        grid-template-areas: "inicio" "Prédicas en vivo" "Nosotros" "Seminario" "Mapa";
+        gap: 0px;
+    }
+    .inicio {
+        margin: 0px;
+        padding: 0px; 
+        height: 15px;
+    }
+    .predica {
+        display: none;
+    }
+    .Nosotros {
+        margin: 0px;
+        padding: 0px;
+        height: 15px;
+    }
+    .Seminario {
+        margin: 0px;
+        padding: 0px;
+        height: 15px;
+    }
+    .Mapa {
+        margin: 0px;
+        padding: 0px;
+        height: 15px;
+    }
+    @keyframes changecolor {
+        0% {
+            background-color: white;
+        }
+        50% {
+            background-color: white;
+        }
+        100% {
+            background-color: white;
+        }
+    }
+}
+
+
+.inicio {
+    grid-area: "inicio";
+    padding: 10px;
+    margin: 8px 0;
+    align-items: center;
+    justify-items: center;
+    background: transparent;
+    color: black;
+}
 
 .predica{
-    background-color: red;
+    grid-area: "predica";
+    padding: 10px 15px;
+    margin: 8px 0;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    border-radius: 30px;
+    color: black;
+}
+
+
+.predica {
+    animation: changecolor 1s linear infinite;
+}
+
+@keyframes changecolor {
+    0% {
+        background-color: rgba(255,186,184,0.1);
+    }
+    50% {
+        background-color: #AD0000;
+    }
+    100% {
+        background-color: rgba(255,186,184,0.1);
+    }
+}
+
+
+
+
+.Nosotros {
+    grid-area: "Nosotros";
+    padding: 10px;
+    margin: 8px 0;
+    align-items: center;
+    justify-items: center;
+    color: black;
+}
+
+.Seminario {
+    grid-area: "Seminario";
+    padding: 10px;
+    margin: 8px 0;
+    align-items: center;
+    justify-items: center;
+    color: black;
+}
+
+.Mapa {
+    grid-area: "Mapa";
+    padding: 10px;
+    margin: 20px 0;
+    align-items: center;
+    justify-items: center;
+    color: black;
 }
 
 /*bacground color*/
@@ -392,7 +526,7 @@ Button
 
 .btn-primary{
     color: #fff;
-    background-color: #AD0000;
+    background-color: #212121;
     border:1px solid;
     border-color: #212121;
     padding: 1rem 2rem;
@@ -1002,11 +1136,20 @@ Nav Menu style
 /*
 Home Section style
 ==================*/
+
 .home{
     background: url(../images/background/header.jpg) no-repeat bottom center;
     background-size: cover;
     position: relative;
 }
+
+@media only screen and (max-width: 990px) {
+    .home{
+        background: url(../images/background/header2.jpg) no-repeat bottom center;
+        bottom: -50px;
+    }
+}
+
 .main_home{
     overflow: hidden;
     padding-top: 300px;
@@ -1019,6 +1162,18 @@ Home Section style
     font-size:4.286rem;
     font-weight: 700;
     line-height: 6.5rem;
+    text-shadow: 0 5px 20px #212121;
+}
+
+@media only screen and (max-width: 990px) {
+    .home_text h1{
+        font-size: 3rem;    
+        line-height: 40px;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
 }
 
 
@@ -1712,6 +1867,9 @@ Live Section style
   .button-form :hover {
   color: #f5f5f5; 
 }
+/*
+Contact Section style
+=====================*/
 
 /*
 Contact Section style
