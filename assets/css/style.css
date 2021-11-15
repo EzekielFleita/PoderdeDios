@@ -1,5 +1,4 @@
 
-
 /*==========================================
  01.  PREDIFINEED (FROM 1 TO 780 )
  02.  PRELOADER - LINE NO 786
@@ -1266,6 +1265,10 @@ Button live
     font-weight: 600;
     justify-self: start;
     border-radius: 30px;
+}
+
+.buttonlive:hover {
+    background-color: #f5f5f5f5;
 }
 
 @media only screen and (max-width:900px) {
