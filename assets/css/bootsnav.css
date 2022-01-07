@@ -697,7 +697,9 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     nav.navbar.bootsnav.navbar-fixed .logo-scrolled{
         display: block;
     }
-    
+    .logo-scrolled{
+        border-radius: 30px !important;
+    }
     /* Atribute Navigation
     =================================*/    
     .attr-nav > ul > li.dropdown ul.dropdown-menu{

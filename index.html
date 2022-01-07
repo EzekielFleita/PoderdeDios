@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/slick-theme.css">
@@ -30,6 +31,27 @@
         <link rel="stylesheet" href="assets/css/responsive.css" />
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration template_l77oby8
+                emailjs.init('user_8PAQJxXhAcj0pP1OEzXE5');
+            })();
+        </script>  
+            <script type="text/javascript">
+                window.onload = function() {
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        // these IDs from the previous steps
+                        emailjs.sendForm('service_uv9q8vg', 'template_l77oby8', this)
+                            .then(function() {
+                                console.log('SUCCESS!');
+                            }, function(error) {
+                                console.log('FAILED...', error);
+                            });
+                    });
+                }
+            </script>
     </head>
     <body data-spy="scroll" data-target=".navbar-collapse">
         <!-- Preloader -->
@@ -129,6 +151,10 @@
                     </div>
                 </div>
             </section> 
+            <!--Boton contribuciones-->
+            <a href="/constribuciones.html">
+                <section class="boton_contribuir" > <h5 class="h5_contribuir">CONTRIBUIR</h5 class="h5_contribuir"></section>
+            </a>
             <!--Submenú-->
             <section class="sub_menu"> 
                 <a href="/vivo.html">
@@ -145,17 +171,17 @@
                         </div>
                     </div>
                 </a>
-                <a href="/contacto.html">
+                <a href="/seminario.html">
                     <div class="sub3">
-                        <div class="title_sub">
-                            <h3 class="title_sub_sub">Contacto</h3>
+                        <div class="title_sub"> 
+                            <h3 class="title_sub_sub">Seminario</h3>
                         </div>
                     </div>
                 </a>
                 <a href="/contacto.html">
                     <div class="sub4">
-                        <div class="title_sub"> 
-                            <h3 class="title_sub_sub">Seminario</h3>
+                        <div class="title_sub">
+                            <h3 class="title_sub_sub">Contacto</h3>
                         </div>
                     </div>
                 </a>
@@ -491,55 +517,44 @@
             </div>
 
             <!--Contactanos-->
-            <section id="contact" class="contact bg-mega fix">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_contact roomy-100 text-white">
-                            <div class="col-sm-8 col-sm-offset-2">
-                                <div class="head_title text-center">
-                                    <div class="widget_head">
-                                        <h3 class="text-white">Contáctanos</h3>
-                                        <div class="separator_auto"></div>
-                                    </div>
-                                    <p class="fontform"> Ponte en contacto con nosotros por ayuda espiritual, pedidos de oración o asistir a nuestras reuniones.<br> <br>Email: contacto@poderdedios.com <br> <br>Número de celular: +5491164195555 </p>
-                                    <div class="widget_socail m-top-30">
-                                        <ul class="list-inline">
-                                            <li><a href="http://www.youtube.com/c/mariofleita"><i class="fa fa-youtube"></i></a></li>
-                                            <li><a href="https://www.facebook.com/marionestorfleita"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="https://www.instagram.com/ipoderdedios/"><i class="fa fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div> 
-                                    <a href="https://forms.gle/F7NyH8xthZbXftGx6" class="button-form">CLICK AQUÍ</a>    
-                                </div>
-                            </div>
-            <!--Contactanos <div class="col-md-8 sm-m-top-30">
-                                <form class="" action="subcribe.php">       
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group"> 
-                                                <input id="first_name" name="first_name" type="text" placeholder="Nombre" class="form-control" required="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">  
-                                                <input id="phone" name="phone" type="text" placeholder="Número de celular" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-12">
-                                            <div class="form-group">  
-                                                <textarea class="form-control" rows="6" placeholder="Mensaje"></textarea>
-                                            </div>
-                                            <div class="form-group text-center">
-                                                <a href="" class="btn btn-primary">Enviar</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </form> 
-                            </div> -->
+            <section class="section_contacto1">
+                <div class="form_home">
+                <form class="form" id="contact-form">
+                    
+                
+                        <legend>Contacto  | Ayuda espiritual | Pedido de oración</legend>
+                        <div>
+                            <input class="input_home1" name="name" type="text" placeholder="Nombre y apellido">
+                        </div>
+                        
+                        <div>
+                            <input class="input_home2" name="number" type="number" placeholder="Número de teléfono" >
+                        </div>  
+                
+                        <div>
+                            <input class="input_home3" name="email" type="email" placeholder="Correo electronico" >
+                        </div>
+                
+                        <div>
+                            <textarea class="input_home4"  name="message"></textarea>
+                        </div>
+                
+                            <input class="input_home5"  type="submit" value="Enviar">
+                </form>
+                <div class="datos_form">
+                    <h5>Datos de Contacto</h5>
+                    <p>Teléfono: +5491164195555</p>
+                    <p>Email: contacto@poderdedios.com.ar / igesiapoderdediosargentina@gmail.com</p>
+                    <p>Dirección: Tucumán 150, Pilar, Buenos Aires, Argentina</p>
+                    <div class="content_a">
+                    <a class="a_seminario" href="https://www.facebook.com/marionestorfleita"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a class="a_seminario" href="https://www.youtube.com/c/mariofleita"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a class="a_seminario" href="https://www.instagram.com/mario.nestor.fleita"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>  
+                </div>
+                </div>
+                </section>
+            
                         </div>
                     </div>
                 </div>

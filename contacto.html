@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="utf-8">
-        <title>Poder de Dios</title>
+        <title>Poder de Dios | Contacto</title>
         <meta name="google-site-verification" content="X560FmCzwIcgZElHyxExK4PrFgsCvdOzYXhR1Hnjy0U" />
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/slick-theme.css">
@@ -27,6 +28,27 @@
         <link rel="stylesheet" href="assets/css/responsive.css" />
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration template_l77oby8
+                emailjs.init('user_8PAQJxXhAcj0pP1OEzXE5');
+            })();
+        </script>  
+            <script type="text/javascript">
+                window.onload = function() {
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        // these IDs from the previous steps
+                        emailjs.sendForm('service_uv9q8vg', 'template_l77oby8', this)
+                            .then(function() {
+                                console.log('SUCCESS!');
+                            }, function(error) {
+                                console.log('FAILED...', error);
+                            });
+                    });
+                }
+            </script>
     </head>
     <body data-spy="scroll" data-target=".navbar-collapse">
         <!-- Preloader -->
@@ -109,16 +131,44 @@
             </nav>
 <!--body-->
 
-<section class="predicacion">
+<section class="section_contacto">
+<div class="form_home">
+<form class="form" id="contact-form">
+    
 
+        <legend>Contacto  | Ayuda espiritual | Pedido de oración</legend>
+        <div>
+            <input class="input_home1" name="name" type="text" placeholder="Nombre y apellido">
+        </div>
+        
+        <div>
+            <input class="input_home2" name="number" type="number" placeholder="Número de teléfono" >
+        </div>  
+
+        <div>
+            <input class="input_home3" name="email" type="email" placeholder="Correo electronico" >
+        </div>
+
+        <div>
+            <textarea class="input_home4"  name="message"></textarea>
+        </div>
+
+            <input class="input_home5"  type="submit" value="Enviar">
+</form>
+<div class="datos_form">
+    <h5>Datos de Contacto</h5>
+    <p>Teléfono: +5491164195555</p>
+    <p>Email: contacto@poderdedios.com.ar / igesiapoderdediosargentina@gmail.com</p>
+    <p>Dirección: Tucumán 150, Pilar, Buenos Aires, Argentina</p>
+    <div class="content_a">
+    <a class="a_seminario" href="https://www.facebook.com/marionestorfleita"><i class="fab fa-facebook fa-2x"></i></a>
+    <a class="a_seminario" href="https://www.youtube.com/c/mariofleita"><i class="fab fa-youtube fa-2x"></i></a>
+    <a class="a_seminario" href="https://www.instagram.com/mario.nestor.fleita"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>  
+</div>
+</div>
 </section>
 
-
-
-            <!-- scroll up-->
-            <div class="scrollup">
-                <a href="#"><i class="fa fa-chevron-up"></i></a>
-            </div>
 
             <footer id="footer" class="footer bg-black">
                 <div class="container">
