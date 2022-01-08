@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/slick-theme.css">
@@ -30,7 +31,55 @@
         <link rel="stylesheet" href="assets/css/responsive.css" />
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration template_l77oby8
+                emailjs.init('user_8PAQJxXhAcj0pP1OEzXE5');
+            })();
+        </script>  
+            <script type="text/javascript">
+                window.onload = function() {
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        // these IDs from the previous steps
+                        emailjs.sendForm('service_uv9q8vg', 'template_l77oby8', this)
+                            .then(function() {
+                                console.log('SUCCESS!');
+                            }, function(error) {
+                                console.log('FAILED...', error);
+                            });
+                    });
+                }
+            </script>
+                <script>
+
+                    function initElement() {
+                      var a = document.getElementById("f1");
+                      var b = document.getElementById("f3");
+                      var c = document.getElementById("f5");
+
+                      a.onclick = showLettersA;
+                      b.onclick = showLettersB;
+                      c.onclick = showLettersC;
+
+                    };
+                    
+                    function showLettersA(event) {
+                      var a = document.getElementById("f2")
+                      a.classList.replace("semi", "selected")
+                    }
+                    function showLettersB(event) {
+                      var b= document.getElementById("f4")
+                      b.classList.replace("semi", "selected")
+                    }
+                    function showLettersC(event) {
+                      var c = document.getElementById("f6")
+                      c.classList.replace("semi", "selected")
+                    }
+                  </script>
     </head>
+    <body onload="initElement();">
     <body data-spy="scroll" data-target=".navbar-collapse">
         <!-- Preloader -->
         <div id="loading">
@@ -73,12 +122,12 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <div class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                             <div class="buttonsheader">        
-                                <a class="inicio" href="#hello">Inicio</a>   
-                                <a class="predica" href="#portfolio">Prédicas en vivo</a>              
-                                <a class="Nosotros" href="#about">Nosotros</a>                                       
+                                <a class="inicio" href="/">Inicio</a>   
+                                <a class="predica" href="/vivo.html">Prédicas en vivo</a>              
+                                <a class="Nosotros" href="/reuniones.html">Reuniones</a>                                       
                                 <!-- <li><a href="#pricing">Seminario</a></li>-->                 
-                                <a class="Seminario" href="#blog">Seminario</a>      
-                                <a class="Mapa" href="#maps">Mapa</a> 
+                                <a class="Seminario" href="/seminario.html">Seminario</a>      
+                                <a class="Mapa" href="/contacto.html">Contacto</a> 
                                 <!--<li><a href="#contact">Contacto</a></li> -->
                             </div>    
                         </div>
@@ -121,7 +170,7 @@
                             </div>
 
                             <div class="home_btns m-top-40">
-                                <a href="#portfolio" class="buttonlive">VER PREDICA EN VIVO</a>
+                                <a href="/vivo.html" class="buttonlive">VER PREDICA EN VIVO</a>
                                 <a href="#maps" class="btn btn-default m-top-20">Visitanos</a>    
                             </div>
 
@@ -129,36 +178,109 @@
                     </div>
                 </div>
             </section> 
+            <!--Boton contribuciones-->
+            <a href="/constribuciones.html">
+                <section class="boton_contribuir" > <h5 class="h5_contribuir">CONTRIBUIR</h5 class="h5_contribuir"></section>
+            </a>
+            <!--Submenú-->
+            <div class="wow fadeInLeft" data-wow-duration="1s"> 
+            <section class="sub_menu"> 
+                <a href="/vivo.html">
+                    <div class="sub1">
+                        <div class="title_sub">                    
+                            <h3 class="title_sub_sub">Ver prédicas en vivo</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="/reuniones.html">
+                    <div class="sub2"> 
+                        <div class="title_sub">
+                            <h3 class="title_sub_sub">Reuniones presenciales</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="/seminario.html">
+                    <div class="sub3">
+                        <div class="title_sub"> 
+                            <h3 class="title_sub_sub">Seminario</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="/contacto.html">
+                    <div class="sub4">
+                        <div class="title_sub">
+                            <h3 class="title_sub_sub">Contacto</h3>
+                        </div>
+                    </div>
+                </a>
+            </section>
+            </div>
             <!--Predicas en vivo-->
-            <section id="portfolio" class="portfolio lightbg">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_portfolio roomy-100">
-                            <div class="head_title text-center">
-                                <h2>Prédica en vivo</h2>
+            <div class="wow fadeInRight" data-wow-duration="1s"> 
+                <div id="portfolio" class="portfolio lightbg">
+                    <br><br><br><br> <br> <br> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="about_bottom_content">
+                                <div class="head_title text-center">
+                                    <h2>Nuestro propósito es</h2>
                                     <div class="separator_auto"></div>
-                                    <br> <br><br>
-                            <div class="live">
-                                <iframe class="stream" src="https://www.youtube.com/embed/ZYLL7vbwYwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="about_bottom_item m-top-20">
+                                        <div class="ab_head">
+                                            <div class="ab_head_icon" id="f1">
+                                                <i class="icofont icofont-fire-burn"></i>
+                                            </div>
+                                            <h6 class="m-top-20"> Adorar a Dios</h6>
+                                        </div>
+                                        <div id="f2" class="semi">
+                                         <p class="m-top-20">Adorar a Dios es reconocer su naturaleza, atributos y demandas; 
+                                             derramando el corazón en alabanza y acción de gracias, proclamando con 
+                                             diversas posturas corporales: ¡Quién es Dios!, 
+                                             ¡Cómo es y sus poderosas obras! Lo expresamos con júbilo, excitación, multimedia y música. </p>
+                                        </div>
+                                    </div>
+                                </div><br class="br">
+                                <div class="col-md-4">
+                                    <div class="about_bottom_item m-top-20">
+                                        <div class="ab_head">
+                                            <div class="ab_head_icon" id="f3">
+                                                    <i class="icofont icofont-heart"></i>
+                                            </div>
+                                            <h6 class="m-top-20">Edificar la iglesia</h6>
+                                        </div>
+                                        <div id="f4" class="semi">
+                                            <p class="m-top-20">Una iglesia edificada es mucho más que una congregación, 
+                                                es un lugar donde se apropian de un estilo de vida basado en los valores del Reino de Dios, 
+                                                constituyendo la auténtica fe cristiana; compartiendo, amando y siendo felices. 
+                                                Así, somos perfeccionados para cumplir la misión y visión de la iglesia local.</p>
+                                        </div>
+
+                                    </div>
+                                </div><br class="br">
+                                <div class="col-md-4">
+                                    <div class="about_bottom_item m-top-20">
+                                        <div class="ab_head">
+                                            <div class="ab_head_icon" id="f5">
+                                                <i class="icofont icofont-speech-comments"></i>
+                                            </div>
+                                            <h6 class="m-top-20">Alcanzar a los perdidos</h6>
+                                        </div>
+                                        <div id="f6" class="semi">                                         
+                                            <p class="m-top-20">La iglesia es imperecedera y prevalecerá hasta el regreso de Jesús, 
+                                                debiendo cumplir la gran comisión de Mateo 28:16-20, 
+                                                proclamando la verdad revelada en la Biblia, con valor y poder, 
+                                                sobreviviendo a todos los ataques de persecución. </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="licenciado">
-                            Mirá aquí EN VIVO y EN DIRECTO mensajes de inspiración, desde una perspectiva de fe para el tiempo presente. 
-                            Se trata de profundas y relevantes enseñanzas extraídas directamente de la Palabra de Dios, 
-                            que van a inspirarte, alentarte, bendecirte y hacerte crecer. 
-                            ¡Unite a este avivamiento!
-                            <br> <br>
-                            El Lic. MARIO NÉSTOR FLEITA es pastor, periodista, profesor y autor. 
-                            Realiza streamings, prédicas y estudios bíblicos sobre los temas más relevantes del ser humano, la vida, 
-                            la eternidad y la salvación a través de Jesucristo.
-                            <br> <br>
-                            Sebastián Fleita es evangelista y tiene una Diplomatura en Teología con especialización en Teología Pastoral, 
-                            (Instituto Bíblico Río de la Plata, internado, 4 años).
-                            </p>
-                    </div>
+                    </div>  
+                    <br><br><br><br> <br> <br><br> <br>
+                </div> 
                 </div>
-            </section>
-
             <!--Sobre nosotros-->
             <section id="about" class="about roomy-100">
                 <div class="container">
@@ -169,9 +291,12 @@
                                     <h2>Sobre nosotros</h2>
                                     <div class="separator_left"></div>
 
-                                    <p>La Iglesia Poder de Dios Argentina tiene un llamado a ungir a las nuevas generaciones, buscando ser el emblema de un nuevo despertar espiritual.
-                                        <br>"Pero tenemos este tesoro en vasos de barro, para que la excelencia del <b>poder</b> sea <b>de Dios</b>, y no de nosotros" 
-                                        2 Corintios 4:7</p>
+                                    <p>
+                                        La Iglesia Poder de Dios Argentina tiene un llamado a ungir a las nuevas generaciones, buscando ser el emblema de un nuevo despertar espiritual para todas las familias, a través del impacto que produce la proclamación de la revelación de la Palabra de Dios y de la ministración en el poder del Espíritu Santo. 
+                                        Como iglesia local, tenemos una triple finalidad: adorar a Dios, edificar la iglesia y alcanzar a los perdidos. 
+                                        Los pastores Alicia y Mario Fleita, fundadores de la Iglesia, tienen una sólida formación en teología y una vasta preparación académica en ciencias de la comunicación social, en periodismo y en la enseñanza de la lengua y la literatura. 
+                                        Nuestro texto bíblico lema, del cual surge el nombre de la iglesia, es: 
+                                        "Pero tenemos este tesoro en vasos de barro, para que la excelencia del <b>poder</b> sea <b>de Dios</b>, y no de nosotros" 2 Corintios 4:7</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -180,30 +305,30 @@
                                         <h6><i class="fa fa-angle-right"></i> ¿Cuales son los horarios de reunión? </h6>
                                         <div>
                                             <div class="content">
-                                                <p>Durante Diciembre del 2021, los miércoles oración corporativa a las 20 hs, sábados a las 19 hs y domingos a las 19 hs. (En auditorio: Tucumán 150, Pilar, Buenos Aires) </p>
+                                                <p>Durante Enero de 2022, los miércoles oración corporativa a las 20 hs,  los servicios de los sábados y domnigos a las 20 hs. <a href="reuniones.html">Ver más...</a> </p>
 
                                             </div>
                                         </div> 
                                         <h6><i class="fa fa-angle-right"></i> ¿Hay actividades para niños?</h6>
                                         <div>
                                             <div class="content">
-                                                <p>Todos los domingos a las 6 pm.</p>
+                                                <p>Las clases para niños se retoman en febrero 2022.</p>
                                             </div>
                                         </div> 
 
                                         <h6> <i class="fa fa-angle-right"></i> ¿Hay actividades para mujeres? </h6>
                                         <div>
                                             <div class="content">
-                                                <p>Todos los sábados a las 5:30 pm.</p>
+                                                <p>A partir de febrero, todos los jueves a las 19hs.</p>
                                             </div>
                                         </div> 
 
-                                        <h6><i class="fa fa-angle-right"></i> ¿Hay actividades virtuales? </h6>
+                                        <h6><i class="fa fa-angle-right"></i> ¿Cómo puedo contribuir? </h6>
                                         <div>
                                             <div class="content">
-                                                <p>Si! Escudo de oración, lunes, 5 am Arg.
+                                                <p>Podés contribuir con tus donaciones, diezmos y ofrendas de la siguientes maneras:
                                                     <br>
-                                                    Lectura bíblica, jueves, 8:30 pm Arg.
+                                                    <a href="constribuciones.html">Click aquí para conocer más...</a>
                                                 </p>
                                                 
                                             </div>
@@ -231,56 +356,7 @@
                     </div>
                 </div>
             </section>
-                <div id="portfolio" class="portfolio lightbg">
-                    <br><br><br><br> <br> <br> 
-                    <div class="container">
-                        <div class="row">
-                            <div class="about_bottom_content">
-                                <div class="head_title text-center">
-                                    <h2>Nuestro propósito es</h2>
-                                    <div class="separator_auto"></div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="about_bottom_item m-top-20">
-                                        <div class="ab_head">
-                                            <div class="ab_head_icon">
-                                                <i class="icofont icofont-fire-burn"></i>
-                                            </div>
-                                            <h6 class="m-top-20"> Adorar a Dios</h6>
-                                        </div>
-                                         <!-- p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing ealit, 
-                                            sed diaim nonummy nibsih euismod tincidiunt laorieet doloire
-                                            magna diam aliquafm erat voluitpati. </p>-->
-                                    </div>
-                                </div><br class="br">
-                                <div class="col-md-4">
-                                    <div class="about_bottom_item m-top-20">
-                                        <div class="ab_head">
-                                            <div class="ab_head_icon">
-                                                <i class="icofont icofont-heart"></i>
-                                            </div>
-                                            <h6 class="m-top-20">Edificar la iglesia</h6>
-                                        </div>
-                                         <!-- <p class="m-top-20">Lorem ipsum dolor sit amet, consectetuer adipiscing ealit, 
-                                            sed diaim nonummy nibsih euismod tincidiunt laorieet doloire
-                                            magna diam aliquafm erat voluitpati. </p>-->
-                                    </div>
-                                </div><br class="br">
-                                <div class="col-md-4">
-                                    <div class="about_bottom_item m-top-20">
-                                        <div class="ab_head">
-                                            <div class="ab_head_icon">
-                                                <i class="icofont icofont-speech-comments"></i>
-                                            </div>
-                                            <h6 class="m-top-20">Alcanzar a los perdidos</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <br><br><br><br> <br> <br><br> <br>
-                </div> 
+              
             <!--Servicios/Actividades-->
             <!--<section id="service" class="service">
                 <div class="container">
@@ -423,7 +499,7 @@
             </section> 
 
             <!--Seminario-->
-            <section id="blog" class="blog">
+            <div class="wow fadeInLeft" data-wow-duration="1s"> 
                 <div class="container">
                     <div class="row">
                         <div class="main_blog text-center roomy-100">
@@ -431,9 +507,21 @@
                                 <div class="head_title text-center">
                                     <h2>Seminario</h2>
                                     <div class="separator_auto"></div>
-                                    <p>El Seminario Poder de Dios te ofrece un Diploma en CERTIFICADO EN MINISTERIO, totalmente a distancia. Son 20 materias que cubren los aspectos personales, bíblicos, teológicos, doctrinales y ministeriales con un enfoque al despertar espritual.</p>
+                                        <div class="grid-semi"> 
+                                            <div class="p_semi">
+                                                <p>El Seminario Poder de Dios te ofrece un Diploma en 
+                                                    CERTIFICADO EN MINISTERIO, totalmente a distancia. 
+                                                    Son 20 materias que cubren los aspectos personales, 
+                                                    bíblicos, teológicos, doctrinales y ministeriales 
+                                                    con un enfoque al despertar espritual.</p>
+                                            </div>
+                                            <div class="p_semi">
+                                            <img class="img_semi" src="assets/images/responsive.png">
+                                        </div>
+                                        </div>
+                                   
                                     <br><br>
-                                    <a href="https://forms.gle/91ZsR6zoUX23WYEk9" class="btn btn-primary m-top-20">Click aquí para más</a>
+                                    <a href="/seminario.html" class="btn btn-primary m-top-20">Click aquí para más</a>
                                 </div>
                             </div>
                             <!--
@@ -474,7 +562,7 @@
                     </div>
                 </div>
             </section>
-
+        </div>
             <!--Maps Section-->
             <div id="maps"class="main_maps text-center fix">
                 <div class="overlay"></div>
@@ -485,60 +573,50 @@
             </div>
 
             <!--Contactanos-->
-            <section id="contact" class="contact bg-mega fix">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_contact roomy-100 text-white">
-                            <div class="col-sm-8 col-sm-offset-2">
-                                <div class="head_title text-center">
-                                    <div class="widget_head">
-                                        <h3 class="text-white">Contáctanos</h3>
-                                        <div class="separator_auto"></div>
-                                    </div>
-                                    <p class="fontform"> Ponte en contacto con nosotros por ayuda espiritual, pedidos de oración o asistir a nuestras reuniones.<br> <br>Email: contacto@poderdedios.com <br> <br>Número de celular: +5491164195555 </p>
-                                    <div class="widget_socail m-top-30">
-                                        <ul class="list-inline">
-                                            <li><a href="http://www.youtube.com/c/mariofleita"><i class="fa fa-youtube"></i></a></li>
-                                            <li><a href="https://www.facebook.com/marionestorfleita"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="https://www.instagram.com/ipoderdedios/"><i class="fa fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div> 
-                                    <a href="https://forms.gle/F7NyH8xthZbXftGx6" class="button-form">CLICK AQUÍ</a>    
-                                </div>
-                            </div>
-            <!--Contactanos <div class="col-md-8 sm-m-top-30">
-                                <form class="" action="subcribe.php">       
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group"> 
-                                                <input id="first_name" name="first_name" type="text" placeholder="Nombre" class="form-control" required="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">  
-                                                <input id="phone" name="phone" type="text" placeholder="Número de celular" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-12">
-                                            <div class="form-group">  
-                                                <textarea class="form-control" rows="6" placeholder="Mensaje"></textarea>
-                                            </div>
-                                            <div class="form-group text-center">
-                                                <a href="" class="btn btn-primary">Enviar</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </form> 
-                            </div> -->
+            <div class="wow fadeInRight" data-wow-duration="1s">
+            <section class="section_contacto1">
+                <div class="form_home">
+                <form class="form" id="contact-form">
+                    
+                
+                        <legend>Contacto  | Ayuda espiritual | Pedido de oración</legend>
+                        <div>
+                            <input class="input_home1" name="name" type="text" placeholder="Nombre y apellido">
+                        </div>
+                        
+                        <div>
+                            <input class="input_home2" name="number" type="number" placeholder="Número de teléfono" >
+                        </div>  
+                
+                        <div>
+                            <input class="input_home3" name="email" type="email" placeholder="Correo electronico" >
+                        </div>
+                
+                        <div>
+                            <textarea class="input_home4"  name="message"></textarea>
+                        </div>
+                
+                            <input class="input_home5"  type="submit" value="Enviar">
+                </form>
+                <div class="datos_form">
+                    <h5>Datos de Contacto</h5>
+                    <p>Teléfono: +5491164195555</p>
+                    <p>Email: contacto@poderdedios.com.ar / igesiapoderdediosargentina@gmail.com</p>
+                    <p>Dirección: Tucumán 150, Pilar, Buenos Aires, Argentina</p>
+                    <div class="content_a">
+                    <a  target="_blank"  class="a_seminario" href="https://www.facebook.com/marionestorfleita"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a  target="_blank"  class="a_seminario" href="https://www.youtube.com/c/mariofleita"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a  target="_blank"  class="a_seminario" href="https://www.instagram.com/mario.nestor.fleita"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>  
+                </div>
+                </div>
+                </section>
+            
                         </div>
                     </div>
                 </div>
             </section>
-
+        </div>
             <!-- scroll up-->
             <div class="scrollup">
                 <a href="#"><i class="fa fa-chevron-up"></i></a>
