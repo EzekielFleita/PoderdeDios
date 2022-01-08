@@ -86,6 +86,16 @@ body {
     width: 400px;
     margin: -100px 0;
 }
+@media only screen and (max-width: 460px) {
+    .img_semi{
+        margin: -50px 0;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .img_semi{
+        margin: -30px 0;
+    }
+}
 .grid-semi{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -123,7 +133,7 @@ body {
     top:0;
     grid-area: texto;
     display: grid;
-    text-align: start;
+    text-align: center;
     align-content: center;
     align-items:center;
     justify-content: center;
@@ -146,13 +156,15 @@ body {
     "a b"
     "c c";
 }
-
+.div-semi{
+    padding:0;
+}
 @media only screen and (max-width: 900px) {
     .section_seminario{ 
-        grid-template: 1fr / 1fr;
+        grid-template: 1fr 1fr 1fr/ 1fr;
         grid-template-areas: "a" "b" "c";
-        height: auto;
-        padding: 100px 20px 100px;
+        height:100%;
+        padding: 100px 0 0;
         }
     }
 .section_contacto{
@@ -301,6 +313,9 @@ body {
     .licenciado{
         margin: 20px 30px
     }
+    .text_seminario{
+        padding:10px
+    }
 }
 .text-muted{}
 
@@ -377,7 +392,9 @@ body {
     justify-items: center;
 }
 @media only screen and (max-width: 900px) {
-    
+    .text_predica{
+        padding:0;
+    }
     .home_btns{
         display:grid;
         grid-template:1fr 1fr / 1fr;;
