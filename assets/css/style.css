@@ -139,6 +139,12 @@ body {
     justify-content: center;
     justify-items: center;
 }
+.section_ayuno_s{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(0,200,200,0.9), rgba(0,60,150,0.9));
+}
+
 .section_horarios{
     width: 100%;
     min-height: 800px;
@@ -160,6 +166,7 @@ body {
     padding:0;
 }
 @media only screen and (max-width: 900px) {
+
     .section_seminario{ 
         grid-template: 1fr 1fr 1fr/ 1fr;
         grid-template-areas: "a" "b" "c";
@@ -173,11 +180,85 @@ body {
     background:linear-gradient(rgba(210,210,210,0.9), rgba(150,150,150,0.9));
     padding-top: 100px;
 }
+.section_ayuno{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr repeat(11);
+    padding-top: 100px;
+    grid-template-areas: 
+    "ayunocont ayunocont"
+    "a1 a2"
+    "b1 b2"
+    "c1 c2"
+    "d1 d2"
+    "e1 e2"
+    "f1 f2"
+    "g1 g2"
+    "h1 h2"
+    "i1 i1"
+    "j1 j1" ;
+    align-items: center;
+}
+.ayuno-title-head{
+    grid-area:ayunocont;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+    padding-bottom: 45px;
+    color: white;
+}
+.title-ayuno1{
+    color: white;
+    font-weight: 800;
+}
+.title-ayuno{
+
+    font-size:large;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+}
+.ayuno-p{
+    text-align: center;
+    font-size: medium;
+    font-weight: 600;
+}
+.section-ayuno-body{
+   margin: 30px 0;
+   color: white;
+   text-align: left;
+   text-justify: left;
+   padding: 0 30px;
+}
+.section-ayuno-body1{
+    color: white;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 30px 30px;
+    grid-area: i1;
+    background-color:#212121;
+    height: 80px;
+ }
+ .section-ayuno-body2{
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+    text-justify: center;
+    padding: 0 30px;
+    grid-area: j1;
+ }
 .section_contacto1{
     width: 100%;
     height: 600px;
     background:linear-gradient(rgba(210,210,210,0.9), rgba(150,150,150,0.9));
 }
+
 .section_contribucion{
     width: 100%;
     height: auto;
@@ -206,8 +287,56 @@ body {
     height: 40px;
     width: 100%;
     background-color: #ce3c3c;
-    color: white;}
+    color: white;
+}
+.boton_ayuno{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 100%;
+    background-color: #13A0B2;
+    color: white;
+}
+.botonayuno{
+    align-items: center;
+    justify-content: center ;
+    align-content: center;
+    color: black;
+}
 @media only screen and (max-width:990px){
+    .section_ayuno_s{
+        height: 4000px; 
+    }
+    .title-ayuno1{
+        font-size: x-large;
+    }
+    .section_ayuno{
+        display: grid;
+        grid-template: 100px 5% 230px 5% 1fr 5% 100px 5% 100px 5% 100px 5% 1fr 5% 100px 5% 1fr 100px 100px / 1fr;
+        padding-top: 100px;
+        grid-template-areas: 
+        "ayunocont"
+        "a1" 
+        "a2"
+        "b1" 
+        "b2"
+        "c1" 
+        "c2"
+        "d1" 
+        "d2"
+        "e1" 
+        "e2"
+        "f1" 
+        "f2"
+        "g1" 
+        "g2"
+        "h1" 
+        "h2"
+        "i1"
+        "j1" ;
+        align-items: center;
+    }
     .type_contribucion{
         margin: 10px
     }
