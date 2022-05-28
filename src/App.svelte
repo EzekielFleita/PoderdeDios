@@ -1,22 +1,9 @@
 <script>
-import AboutUs from "./big_components/AboutUs.svelte";
-import BigLinks from "./big_components/BigLinks.svelte";
-import Header from "./big_components/Header.svelte";
-import Purpose from "./big_components/Purpose.svelte";
-import Slider from "./big_components/Slider.svelte";
-import Button from "./buttons/Button.svelte";
-
-let button_constribute = "width:100%; background-color:red";
+	import HeaderRoute from "./big_components/HeaderRoute.svelte";
 </script>
 
 <main>
-	<Header />
-	<Slider />
-	<Button text={"Constribuir"} custom_style={button_constribute}/>
-	<BigLinks />
-	<Purpose />
-	<AboutUs />
-
+	<HeaderRoute />
 </main>
 
 <style>

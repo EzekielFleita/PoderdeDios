@@ -1,11 +1,10 @@
 <script>
-
     export let text = "";
 </script>
     
     
 <main>
-     <button>{text}</button>
+     <button type="button">{text}</button>
 </main>
     
     
