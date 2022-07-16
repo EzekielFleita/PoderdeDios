@@ -23,6 +23,7 @@ afterUpdate(() => {
         bind:value={value_1}
         text={"Adorar a Dios es reconocer su naturaleza, atributos y demandas; derramando el corazón en alabanza y acción de gracias, proclamando con diversas posturas corporales: ¡Quién es Dios!, ¡Cómo es y sus poderosas obras! Lo expresamos con júbilo, excitación, multimedia y música."}
         text_icon={"local_fire_department"} 
+        title={"Adorar a Dios"}
         />
     </div>
     <div class="btn_2">
@@ -30,6 +31,7 @@ afterUpdate(() => {
         bind:value={value_2}
         text={"Una iglesia edificada es mucho más que una congregación, es un lugar donde se apropian de un estilo de vida basado en los valores del Reino de Dios, constituyendo la auténtica fe cristiana; compartiendo, amando y siendo felices. Así, somos perfeccionados para cumplir la misión y visión de la iglesia local."}
         text_icon={"favorite"} 
+        title={"Edificar la Iglesia"}
         />
     </div>
     <div class="btn_3">
@@ -37,6 +39,7 @@ afterUpdate(() => {
         bind:value={value_3}
         text={"La iglesia es imperecedera y prevalecerá hasta el regreso de Jesús, debiendo cumplir la gran comisión de Mateo 28:16-20, proclamando la verdad revelada en la Biblia, con valor y poder, sobreviviendo a todos los ataques de persecución."}
         text_icon={"volunteer_activism"} 
+        title={"Alcanzar a los perdidos"}
         />
     </div>
 </main>

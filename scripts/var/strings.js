@@ -1,8 +1,8 @@
 export var aboutUs =   [
-    "MAYO 2022: Miércoles, 20hs ORACIÓN CORPORATIVA. Sábados y domingos: 19hs SERVICIOS GENERALES. Ver más...",
+    "Miércoles, 20hs ORACIÓN CORPORATIVA. Sábados y domingos: 19hs SERVICIOS GENERALES. Ver más...",
     "Todos los domingos a las 18hs.",
     "Sábados 17:30hs.",
-    "Podés contribuir con tus donaciones, diezmos y ofrendas de la siguientes maneras: Click aquí para conocer más...",
+    "Podés contribuir con tus donaciones, diezmos y ofrendas. Para conocer ingresa en el botón de contribuir.",
     `Esta congregación religiosa cristiana pentecostal se inició la ciudad de Villa Rosa, Pilar, en el año 2010.
 
     Dios usó a los pastores Alicia y Mario Fleita, quienes junto a sus hijos, Mario Sebastián, Ariana Eliana, Matías Nicolás y Pablo Ezekiel, comenzaron a levantar la Iglesia respondiendo al llamado de traer un nuevo avivamiento del poder de Dios en la Argentina. Empezaron primero en su hogar, al mismo tiempo que en una quinta alquilada se llevaban a cabo actividades deportivas con los primeros adolescentes y jóvenes que se añadieron.

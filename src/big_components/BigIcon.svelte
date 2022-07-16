@@ -2,6 +2,7 @@
 import TextHide from "./TextHide.svelte";
 export let text_icon = "";
 export let text= "";
+export let title = "";
 export let value = false;
     
     function changeValue() {
@@ -15,7 +16,7 @@ export let value = false;
             {text_icon}
             </span>
     </main>
-    <TextHide text={text} value={value}/>
+    <TextHide text={text} value={value} title={title}/>
 </section>
 
 

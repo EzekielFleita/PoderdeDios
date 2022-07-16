@@ -137,3 +137,15 @@ button:focus {
 .content_4:hover{
 	background-position: bottom;
 }
+.logo {
+	background:url("./img/logo.jpg");
+	border-radius: 30px;
+	top: 20px;
+}
+.source {
+	width: 500px;
+	background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("./img/caba.jpg");
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 100%;
+}

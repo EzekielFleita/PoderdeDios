@@ -1,7 +1,7 @@
 <script>
     export let value = true;
     export let text="";
-    export let title = "Adorar a Dios";
+    export let title = "";
     
 </script>
 

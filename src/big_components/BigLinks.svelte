@@ -10,10 +10,10 @@ let button_style4 = "";
     
     
 <main>
-    <ButtonImage img={"2"} custom_style={button_style1} text={"Ver prédica en vivo"} />
-    <ButtonImage img={"3"} custom_style={button_style2} text={"Reuniones presenciales"} />
-    <ButtonImage img={"4"} custom_style={button_style3} text={"Seminario"} />
-    <ButtonImage img={"1"} custom_style={button_style4} text={"Contacto"} />
+    <ButtonImage link={"/en-vivo"} img={"2"} custom_style={button_style1} text={"Ver prédica en vivo"} />
+    <ButtonImage link={"/horarios"} img={"3"} custom_style={button_style2} text={"Reuniones presenciales"} />
+    <ButtonImage link={"/seminario"} img={"4"} custom_style={button_style3} text={"Seminario"} />
+    <ButtonImage link={"/contacto"} img={"1"} custom_style={button_style4} text={"Contacto"} />
 </main>
     
 <style>

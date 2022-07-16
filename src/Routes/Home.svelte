@@ -24,7 +24,7 @@ import CommingSoon from "../big_components/CommingSoon.svelte";
 
 <main style={chargginON ? "opacity:1" : "opacity:0"}>
 	<Slider />
-	<Button text={"CONTRIBUIR"} custom_style={button_constribute}/>
+	<!-- <Button text={"CONTRIBUIR"} custom_style={button_constribute}/> -->
 	<BigLinks />
 	<Purpose />
 	<CommingSoon />
