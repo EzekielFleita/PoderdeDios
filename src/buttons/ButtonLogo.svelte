@@ -3,7 +3,8 @@
 </script>
 
 <main>
-    <a href={link}><p>LOGO</p></a>
+    <a href={link}>
+    <div class="logo"></div></a>
 </main>
 
 <style>
@@ -21,6 +22,5 @@
         align-self: center;
         justify-self: center;
         margin: 0;
-        background-color: green;
     }
 </style>
