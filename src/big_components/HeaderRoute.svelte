@@ -7,10 +7,28 @@
     import Seminary from "../Routes/Seminary.svelte";
     import Horarios from "../Routes/Horarios.svelte";
     import Contacto from "../Routes/Contacto.svelte";
+    import Login from "../Routes/Login.svelte";
+    import { afterUpdate } from "svelte";
+import Private from "../Routes/Private.svelte";
+
+    let scrolly = 0;
+	let activeColor = false;
+
+
+    afterUpdate(() => {
+        window.addEventListener('scroll', () => {
+            scrolly = window.scrollY;
+            if (scrollY > 400) {
+                activeColor = true;
+            } else {
+                activeColor = false;
+            }
+        })
+    })
 </script>
 
 <Router>
-    <main>
+    <main style={activeColor ? "background-color: #fff;" : "background-color: transparent;"}>
         <Link to="/">
             <ButtonLogo link={""}/>
         </Link>
@@ -45,13 +63,16 @@
     <Route path="/contacto">
         <Contacto />
     </Route>
+    <Route path="/private">
+        <Private />
+    </Route>
 </Router>
 
 <style>
     main {
         display: grid;
         grid-template-columns: 1fr repeat(5, 130px);
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 70px;
         background-color: aqua;
@@ -59,5 +80,7 @@
         align-items: center;
         top: 0;
         left: 0;
+        z-index: 100;
+        transition: all 1500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 </style>    
