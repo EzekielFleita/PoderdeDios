@@ -74,4 +74,10 @@
         div {
             width: 100%;
         }
+        @media only screen and (max-width: 910px) {
+         main {
+            height: auto;
+            grid-template: 1fr 400px / 1fr;
+        }
+    }
     </style>

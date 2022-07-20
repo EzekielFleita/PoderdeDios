@@ -38,16 +38,8 @@ import CommingSoon from "../big_components/CommingSoon.svelte";
 	main {
 		text-align: center;
 		padding: 0;
-		max-width: 240px;
 		margin: 0;
 		transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 		margin-top: -30px;
-	}
-
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
 	}
 </style>

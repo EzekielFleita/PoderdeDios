@@ -7,19 +7,35 @@ import Title from "./Title.svelte";
 let value_1 = false;
 let value_2 = false;
 let value_3 = false;
+let mediaquerie = false;
 
 afterUpdate(() => {
-    console.log(value_1, value_2, value_3)
+    if(document.documentElement.scrollWidth < 910){
+        mediaquerie = true;
+    }
 })
 </script>
 
-<main style={value_1 || value_2 || value_3 ? "height: 630px;": "height: 350px"}>
+<main style={
+    value_1 || value_2 || value_3 ? 
+        mediaquerie ? "height: 1200px;"
+            .concat(value_1 ? "grid-template: 100px 510px 250px 250px / 1fr;grid-template-areas:'t''a''b''c';" 
+            : 
+            value_2 ? "grid-template: 100px 250px 510px 250px / 1fr;grid-template-areas:'t''a''b''c';" : "")
+        : 
+        "height: 630px;" 
+    : 
+        mediaquerie ? "height: 800px;" 
+        : 
+        "height: 350px"
+}>
     <div class="tittle">
         <Title 
         text={"Nuestro Propósito"}
         />
     </div>
-    <div class="btn_1"><BigIcon 
+    <div class="btn_1">
+        <BigIcon 
         bind:value={value_1}
         text={"Adorar a Dios es reconocer su naturaleza, atributos y demandas; derramando el corazón en alabanza y acción de gracias, proclamando con diversas posturas corporales: ¡Quién es Dios!, ¡Cómo es y sus poderosas obras! Lo expresamos con júbilo, excitación, multimedia y música."}
         text_icon={"local_fire_department"} 
@@ -90,5 +106,15 @@ afterUpdate(() => {
         align-items: center;
         justify-items: center;
         justify-content: center;
+    }
+    @media only screen and (max-width: 910px) {
+         main {
+            grid-template: 100px 250px 250px 250px / 1fr;
+            grid-template-areas: 
+            "t"
+            "a" 
+            "b" 
+            "c";
+        }
     }
 </style>

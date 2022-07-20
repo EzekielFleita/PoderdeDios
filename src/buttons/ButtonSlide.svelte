@@ -45,6 +45,7 @@
         text-justify: center;
         border-radius: 35px;
         transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
     }
     p {
         padding: 5px 30px;

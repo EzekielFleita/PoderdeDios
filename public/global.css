@@ -64,22 +64,34 @@ button:focus {
 .slider {
 	background-image: url("./img/header.jpg");
 	background-position:top center;
-	background-size: 120%;
+	background-size: auto;
 	background-repeat: no-repeat;
 	width: 100%;
-	height: 600px;
+	height: auto;
 	margin: -10px 0 0;
 }
+@media only screen and (max-width: 910px) {
+	.slider {
+		background-position:-60rem 4rem;
+	}
+} 
 .comming__soon{
 	background-image: url("./img/back-caba.png");
 	background-position:top center;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: auto;
 	height: auto;
 	padding: 10% 8%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 910px) {
+	.comming__soon {
+	   grid-template: 1fr 1fr / 1fr;
+	   height: 450px;
+	   background-size: auto;
+   }
 }
 .content_1 {
 	grid-area: d;
@@ -143,9 +155,10 @@ button:focus {
 	top: 20px;
 }
 .source {
-	width: 500px;
+	width: 100%;
 	background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("./img/caba.jpg");
 	background-repeat: no-repeat;
-	background-position: top;
+	background-position: center;
 	background-size: 100%;
+	height: 100%;
 }

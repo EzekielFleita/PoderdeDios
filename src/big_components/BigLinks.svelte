@@ -23,4 +23,9 @@ let button_style4 = "";
         width: 100%;
         height: 300px;
     }
+    @media only screen and (max-width: 910px) {
+        main {
+            grid-template: 1fr  1fr/ 1fr 1fr;
+        }
+    }
 </style>

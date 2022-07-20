@@ -5,7 +5,7 @@ import Title from "./Title.svelte";
 let style1 = 
 "background-color: #212121; border-radius: 30px; color: #ffff; font-size: medium; width: 230px; height: 50px";
 ;
-let style2 = "background-color: rgb(83, 83, 83, 0.8); border-radius: 30px; color: white; font-size: medium; width: 130px; height: 50px";
+let style2 = "background-color: rgb(83, 83, 83, 0.8); border-radius: 30px; color: white; font-size: medium; width: 130px; height: 50px;"
 </script>
 
 <main class="slider">
@@ -32,14 +32,24 @@ let style2 = "background-color: rgb(83, 83, 83, 0.8); border-radius: 30px; color
         display: flex;
         flex-direction: row;
         align-self: flex-start;
-        padding: 18% 10%;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
         background: rgb(18,18,18);
         background: linear-gradient(90deg, rgba(18,18,18,0.8575805322128851) 0%, rgba(0,212,255,0) 99%);
-        height: 100%;
+        height: 900px;
+        padding-right: 50%;
     }
     section {
         display: grid;
-        grid-template:100px 1fr / calc(100% - 150px) 150px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        align-self: center;
+        justify-self: center;
+        grid-template:100px 100px / calc(100% - 150px) 150px;
         grid-template-areas: "title title" "button1 button2";
     }
     .title {
@@ -48,4 +58,14 @@ let style2 = "background-color: rgb(83, 83, 83, 0.8); border-radius: 30px; color
         flex-direction: row;
         align-self: flex-start;
     }
+    @media only screen and (max-width: 910px) {
+        .container {
+            padding-right: 0;
+            background: linear-gradient(90deg, rgba(18,18,18,0.9) 0%, rgba(192, 192, 192, 0.1) 99%);
+        }
+        section {
+            grid-template:100px 100px 100px / 100%;
+            grid-template-areas: "title" "button1" "button2";
+        }
+    }   
 </style>

@@ -86,4 +86,9 @@
             align-items: center;
             justify-content: center;
         }
+        @media only screen and (max-width: 910px) {
+            main {
+                grid-template: 1fr  1fr/ 1fr;
+            }
+        }
     </style>

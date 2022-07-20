@@ -1,9 +1,10 @@
 <script>
     export let text = "";
+    export let customStyle = "";
 </script>
     
     
-<main>
+<main style={customStyle}>
      <button type="button">{text}</button>
 </main>
     
@@ -19,6 +20,7 @@
         transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
         font-size: small;
         min-width: 50px;
+        cursor: pointer;
     }
     button:hover {
         background-color: rgb(110, 110, 110);

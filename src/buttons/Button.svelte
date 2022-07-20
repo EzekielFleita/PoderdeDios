@@ -16,5 +16,6 @@
     }
     button{
         margin: 0;
+        cursor: pointer;
     }
 </style>

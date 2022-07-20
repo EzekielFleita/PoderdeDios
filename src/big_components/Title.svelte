@@ -10,4 +10,14 @@
 </main>
 
 <style>
+    h1 {
+        font-size: calc(1em + 1vw);
+        line-height: 1em;
+    }
+    @media only screen and (max-width: 910px) {
+        h1 {
+            font-size: x-large!important;
+            line-height: 1em;
+        }
+    }   
 </style>

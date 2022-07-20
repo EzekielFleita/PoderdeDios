@@ -44,6 +44,7 @@ export let value = false;
         border-width: 8px;
         border-style: solid;
         border-color: rgb(14, 14, 14);
+        z-index: 10;
     }
     span {
         user-select: none;
