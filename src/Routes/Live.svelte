@@ -1,5 +1,5 @@
 <script>
-    let predica = "https://www.youtube.com/embed/4d0KrL2pLRQ"
+    let predica = "https://youtu.be/i94m7Ad4CC0"
 </script>
 
 <div>
